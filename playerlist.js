@@ -1,75 +1,6 @@
 
 
-<style type='text/css'>
-	.video-container {position: relative;padding-bottom: 56.25%;padding-top: 0px; height: 0; overflow: hidden;}
-	.video-container iframe,.video-container object,.video-container embed {position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
-	.Admin855_player{min-width: 300px;width: 100%;height: 100%;overflow: hidden;font-family: sans-serif,arial;font-size: 12px;word-spacing: 2px;background-color: #fff;}
-	.Admin855_player *{margin: 0;padding: 0;}
-	.Admin855_player a{text-decoration: none;}
-	.Admin855_player li{list-style: none;}
-	.Admin855_player i.fa.fa-facebook-square{color: #f1c40f;;}
-	.Admin855_player i.fa.fa-gratipay{color: #E40442;}
-	.Admin855_video{width: 100%;background-color: #000;position: relative;overflow: hidden;}
-	.Admin855_video iframe{width: 100%;height: 100%; position: absolute;top: 0px;left: 0px;display: none;background-color: #000;}
-	.Admin855_server{width: 100%;height: 100%; position: absolute;top: 0px;left: 0px;display: none;}
-	.Admin855_server video{width: 100%;height: 100%;background-color: #000; }
-	.Admin855_list {overflow: auto;}.Admin855_list{ border-top: 1px solid #333; }
 
-	.Admin855_list li{clear: both;border-left: 5px solid #444444; //margin-bottom: 0px;overflow: hidden;cursor: pointer;border-bottom:1px solid #1B1B1B;}
-	.Admin855_list .selected {background-color: #8efbc9;border-left: 5px solid #05A3A3;border-right: 2px solid #05A3A3;}
-	.Admin855_list li:hover{border-left: 5px solid #05A3A3;background:#8efbc9;}.Admin855_list img{float: left;width: 60px;margin-right: 25px;height: 45px;}
-	.Admin855_list div{text-indent: 0px;color: #777;}
-	.Admin855_list div h2{width: 100%;font-size: 120%;text-align:left;margin-top: 15px;font:normal normal 10px Ruda;color: #0000cc;}
-	.Admin855_list div h2 .sele{color: #000}.Admin855_list div p{width: 100%;color: #777;font-size: 100%;}
-	.Admin855_loading{
-	position: absolute;
-	border-radius: 50%;
-	left: 49%;
-	top: 48.5%;
-	padding: 7px;
-	background: #000;
-	animation: spin24 1.4s 0s infinite both;
-	z-index: 9999;
-	
-}
-	@keyframes spin24 {
-	0%, 100% {
-	box-shadow: 0 0 0 #ffd700, 0 0 0 #ffd700, 0 0 0 #ff0099, 0 0 0 #ffd700, 0 0 0 #ffd700, 0 0 0 #ffd700, 0 0 0 #ff0099, 0 0 0 #05A3A3;
-	}
-	50% {
-	transform: rotate(180deg);
-	}
-	25%, 75% {
-	box-shadow: 52px 0 0 #ff0099, -52px 0 0 #eec900, 0 52px 0 #ff0099, 0 -52px 0 #ffd700, 38px -38px 0 #ff0099, 38px 38px 0 #ffd700, -38px -38px 0 #05A3A3, -38px 38px 0 #05A3A3;
-	background: transparent;
-	}
-	100% {
-	transform: rotate(360deg);
-	box-shadow: 0 0 0 #eec900, 0 0 0 #eec900, 0 0 0 #eec900, 0 0 0 #eec900, 0 0 0 #eec900, 0 0 0 #eec900, 0 0 0 #eec900, 0 0 0 #eec900;
-	}
-	}
-	@media only screen and (max-width:479px){
-	.Admin855_list div h2 {color: #0000cc;font-size: 90%;font-weight: normal;margin-top: 4px;text-align: left; width: 100%;} .Admin855_list div p {color: #777;font-size: 80%;width: 100%;}}
-	.Admin855_control {width: 100%;height: 30px;line-height: 30px;background-color: #444444;text-align: center;}
-	.Admin855_btn {-moz-user-select: none;background-color: #000;color: #fff;cursor: pointer;height: 23px;line-height: 20px;margin-left: 2px;margin-right: 2px;padding: 3px 5px;text-transform: uppercase;border-radius:1px;}
-	.Admin855_control .active{background-color: #05A3A3;}
-	.Admin855_desktop .Admin855_video{float: left;height: 100%;}
-	.Admin855_desktop .Admin855_videos{float: left;height: 100%;}
-	.Admin855_desktop .Admin855_btn span{display: none;}
-	.Admin855_desktop .Admin855_list{border-top: 0;}.Admin855_desktop .Admin855_btn{padding: 2px 10px;margin-left: 5px;margin-right: 5px;}
-	.Admin855_player .fa{color: #f1c40f; margin-left: 0px;}
-	.sd_player{min-width: 300px;width: 100%;height: 100%;overflow: hidden;font-family: sans-serif,arial;font-size: 12px;word-spacing: 2px;background-color: #000;}
-	.sd_player *{margin: 0;padding: 0;}
-	.sd_player a{text-decoration: none;}
-	.sd_player li{list-style: none;}
-	.sd_control {width: 100%;height: 0px;}
-	.sd_video{width: 100%;background-color: #000;position: relative;overflow: hidden;}
-	.sd_video iframe{width: 100%;height: 100%; position: absolute;top: 0px;left: 0px;display: none;background-color: #000;}
-	.sd_server{width: 100%;height: 100%; position: absolute;top: 0px;left: 0px;display: none;}
-	.sd_server video{width: 100%;height: 100%;background-color: #000; }
-	.sd_list {display: none;}
-	}
-	</style>
 <script language='javascript' type='text/javascript'>
 	var options = {
 	&#39;player_container&#39;:&#39;#player&#39;,
@@ -79,7 +10,6 @@
 	&#39;automatic_response&#39;:false}
 	</script>
 <script type='text/javascript'>
-	//<![CDATA[
 	function Video_player(opt){;
 	/* check jquery library */
 	if(typeof $ == "undefined"){
@@ -482,5 +412,4 @@ for(var i=0; i<titles.length; i++){
 	clearInterval(timer);
 	} 
 	},50);
-	//]]>
 	</script>
