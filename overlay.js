@@ -1,1 +1,49 @@
-!function(n){var i=function(n,i,a){function e(i){a.style.pointerEvents="none",a.className="flat-overlay",n.onPause(s),n.onPlay(c)}function c(n){a.innerHTML='<div class="back-plate"></div><div class="jw-icon jw-play-playback"></div>'}function s(n){a.innerHTML='<div class="back-plate"></div><div class="jw-icon jw-paused-playback"></div>'}n.onReady(e),this.resize=function(n,i){}};n().registerPlugin("overlay","7.0",i)}(jwplayer);
+(function( jwplayer ) {
+
+  var overlay = function( player, config, div ) {
+
+    var setupOverlay = function() {
+      div.innerHTML = config.text;
+    };
+
+    var showOverlay = function() {
+      setStyle({
+        opacity: 1
+      });
+    };
+
+    var hideOverlay = function() {
+      setStyle({
+        opacity: 0
+      });
+    };
+
+    var setStyle = function( object ) {
+      for(var style in object) {
+        div.style[ style ] = object[ style ];
+      }
+    };
+
+    // Matches our text container to the size of the player instance
+    this.resize = function( width, height ) {
+      setStyle({
+        position: 'absolute',
+        margin: '0',
+        padding: '10px 15px 10px',
+        background: 'rgba( 0, 0, 0, .7 )',
+        color: 'white',
+        fontSize: '12px',
+        width: '100%'
+      });
+    };
+
+    // Bind player events
+    player.onReady( setupOverlay );
+    player.onPlay( hideOverlay );
+    player.onPause( showOverlay );
+    player.onComplete( showOverlay );
+  };
+
+  jwplayer().registerPlugin( 'overlay', overlay );
+
+})( jwplayer );
