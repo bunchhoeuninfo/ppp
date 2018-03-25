@@ -53,7 +53,7 @@ body {
 .jsa-img {
     display: block;
     //left: -20px;
-    top: -16px;
+    top: -160px;
     position: relative;
     z-index: 9999;
 }
