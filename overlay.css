@@ -34,7 +34,7 @@ body {
     position: absolute;
     top: 35%; 
     left: 50%;
-    margin-top: -100px;
+    margin-top: -160px;
     margin-left: -150px;
     //background-color: #f1c40f;
     border-radius: 5px;
@@ -52,8 +52,8 @@ body {
 
 .jsa-img {
     display: block;
-    //left: -20px;
-    top: -160px;
+    left: -20px;
+    top: -20px;
     position: relative;
     z-index: 9999;
 }
