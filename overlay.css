@@ -31,7 +31,7 @@ body {
     /*width: 350px;
     height: 220px;
     line-height: 200px;*/
-    position: fixed;
+    position: absolute;
     top: 50%; 
     left: 50%;
     margin-top: -100px;
