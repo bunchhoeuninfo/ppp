@@ -52,8 +52,8 @@ body {
 
 .jsa-img {
     display: block;
-    left: -20px;
-    top: -12px;
+    //left: -20px;
+    top: -16px;
     position: relative;
     z-index: 9999;
 }
