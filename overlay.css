@@ -1,13 +1,76 @@
-.box {
-  background: 0 0 url(http://ianfarb.com/wp-content/uploads/2013/10/nicholas-hodag.jpg);
+$pink-color: #FD8698;
+ 
+#outer-box {
   width: 300px;
-  height: 200px;
+  height: 194px;
+  display:block;
+  position:relative;
+ 
+  img {
+    width: 300px;
+    height: auto;
+  }
+ 
+  #inner-box {
+    background: $pink-color;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    position: absolute;
+    padding: 0;
+    transition: opacity .5s;
+ 
+    p {
+      color: #fff;
+      line-height: 150px;
+      font-family: 'arial';
+      text-align: center;
+    }
+  }
+ 
+  &:hover {
+    #inner-box {
+      opacity: .9;
+      transition: opacity .5s;
+    }
+  }
 }
 
-.box:after {
-  content: "";
+/* line 3, ../sass/style.scss */
+#outer-box {
+  width: 300px;
+  height: 194px;
   display: block;
-  width: 100%;
+  position: relative;
+}
+/* line 9, ../sass/style.scss */
+#outer-box img {
+  width: 300px;
+  height: auto;
+}
+/* line 14, ../sass/style.scss */
+#outer-box #inner-box {
+  background: #FD8698;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  position: absolute;
+  padding: 0;
+  transition: opacity .5s;
+}
+/* line 25, ../sass/style.scss */
+#outer-box #inner-box p {
+  color: #fff;
+  line-height: 150px;
+  font-family: 'arial';
+  text-align: center;
+}
+/* line 34, ../sass/style.scss */
+#outer-box:hover #inner-box {
+  opacity: .9;
+  transition: opacity .5s;
 }
