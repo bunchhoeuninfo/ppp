@@ -44,10 +44,10 @@ body {
 
 .closebtn {
     position: absolute;
-    top: 20px;
+    //top: 20px;
     text-align: center;
     //right: 45px;
-    font-size: 40px;
+    font-size: 20px;
 }
 
 .content {
