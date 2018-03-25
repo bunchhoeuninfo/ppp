@@ -49,3 +49,10 @@ body {
 h1 {
     font-family: 'Federo', sans-serif;
 }
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
