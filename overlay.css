@@ -32,7 +32,7 @@ body {
     height: 220px;
     line-height: 200px;*/
     position: absolute;
-    top: 50%; 
+    top: 40%; 
     left: 50%;
     margin-top: -100px;
     margin-left: -150px;
@@ -45,8 +45,9 @@ body {
 .closebtn {
     position: absolute;
     top: 20px;
-    right: 45px;
-    font-size: 60px;
+    text-align: center;
+    //right: 45px;
+    font-size: 40px;
 }
 
 .content {
